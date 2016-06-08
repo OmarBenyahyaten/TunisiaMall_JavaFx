@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.net.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Group stylesheets="@../../../../../../../style/PopUp.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tm.enseigne.AddEnseigneController">
+   <children>
+      <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="696.0" prefWidth="458.0" stylesheets="@../../../../../../../style/store.css">
+         <children>
+            <Label fx:id="lblHeader" alignment="CENTER" layoutX="72.0" layoutY="37.0" prefHeight="36.0" prefWidth="318.0" text="Ajouter Enseigne">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </Label>
+            <GridPane hgap="1.0" layoutX="57.0" layoutY="87.0" prefHeight="550.0" prefWidth="417.0">
+               <children>
+                  <TextField fx:id="tfNom" prefHeight="33.0" prefWidth="328.0" promptText="Nom" GridPane.columnSpan="2" />
+                  <TextField fx:id="tfEntreprise" prefHeight="33.0" prefWidth="328.0" promptText="Entreprise" GridPane.columnSpan="2" GridPane.rowIndex="2" />
+                  <ComboBox fx:id="cbOuverture" prefHeight="33.0" prefWidth="330.0" promptText="                               Heure d'ouverture" GridPane.columnSpan="4" GridPane.rowIndex="8" />
+                  <TextField fx:id="tfStore" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="33.0" prefWidth="124.0" promptText="N° Store" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                  <ComboBox fx:id="cbFermetture" prefHeight="33.0" prefWidth="330.0" promptText="                               Heure de fermeture" GridPane.columnSpan="3" GridPane.rowIndex="10" />
+                  <TextArea fx:id="taDescription" prefHeight="129.0" prefWidth="328.0" promptText="                                      Description" GridPane.columnSpan="2" GridPane.rowIndex="12" GridPane.rowSpan="3" />
+                  <TextField fx:id="tfLogo" disable="true" prefHeight="33.0" prefWidth="329.0" promptText="                                Logo de l'Enseigne" GridPane.columnSpan="2" GridPane.rowIndex="16" />
+                  <Button fx:id="btnSource" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#btnSourceOnAction" prefHeight="35.0" prefWidth="37.0" text="..." GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="16" />
+                  <Label fx:id="lbNom" prefHeight="17.0" prefWidth="0.0" GridPane.rowIndex="1" />
+                  <Label fx:id="lbEntreprise" GridPane.rowIndex="3" />
+                  <Label fx:id="lbStore" GridPane.halignment="RIGHT" GridPane.rowIndex="7" />
+                  <Label fx:id="lbHeureDebut" GridPane.rowIndex="9" />
+                  <Label fx:id="lbHeureFin" GridPane.rowIndex="11" />
+                  <Label fx:id="lbDescription" GridPane.rowIndex="15" />
+                  <Label fx:id="lbLogo" GridPane.rowIndex="17" />
+                  <TextField fx:id="tfTel" prefHeight="33.0" prefWidth="374.0" promptText="Téléphone" GridPane.rowIndex="6" />
+                  <ComboBox fx:id="cbCategorie" prefHeight="33.0" prefWidth="330.0" promptText="Catégorie" GridPane.columnSpan="2" GridPane.rowIndex="4" />
+                  <Label fx:id="lbTel" GridPane.rowIndex="7" />
+                  <Label fx:id="lbCategorie" prefHeight="17.0" prefWidth="0.0" GridPane.rowIndex="5" />
+               </children>
+               <columnConstraints>
+                  <ColumnConstraints fillWidth="false" hgrow="SOMETIMES" maxWidth="330.0" minWidth="10.0" prefWidth="205.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="265.0" minWidth="10.0" prefWidth="209.0" />
+                  <ColumnConstraints maxWidth="0.0" minWidth="0.0" prefWidth="0.0" />
+                  <ColumnConstraints maxWidth="0.0" minWidth="0.0" prefWidth="0.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+            </GridPane>
+            <Button fx:id="btnClose" layoutX="437.0" layoutY="-2.0" mnemonicParsing="false" onAction="#btnCloseOnAction" prefHeight="32.0" prefWidth="30.0" text="X" />
+            <Button fx:id="btnAjouter" layoutX="157.0" layoutY="653.0" mnemonicParsing="false" onAction="#btnAjouterOnAction" prefHeight="28.0" prefWidth="166.0" text="Ajouter" />
+         </children>
+      </AnchorPane>
+   </children>
+</Group>

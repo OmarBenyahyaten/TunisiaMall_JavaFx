@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Group stylesheets="@../../style/PopUp.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tm.stock.UpdateStockController">
+   <children>
+      <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="574.0" prefWidth="733.0" stylesheets="@../../style/store.css">
+         <children>
+            <Label fx:id="lblHeader" alignment="CENTER" layoutX="4.0" layoutY="14.0" prefHeight="30.0" prefWidth="726.0" text="Modifier un article">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </Label>
+            <TextField fx:id="tfIDArticle" visible="false" />
+            <Button layoutX="258.0" layoutY="502.0" mnemonicParsing="false" onAction="#btnUpdateOnAction" prefHeight="44.0" prefWidth="219.0" text="Modifier" />
+            <Label fx:id="lbNom" layoutX="188.0" layoutY="121.0" prefHeight="17.0" prefWidth="45.0" />
+            <Label fx:id="lbAchat" layoutX="495.0" layoutY="204.0" prefHeight="17.0" prefWidth="30.0" />
+            <Label fx:id="lbVenteDetail" layoutX="495.0" layoutY="277.0" prefHeight="17.0" prefWidth="53.0" />
+            <Label fx:id="lbVenteGros" layoutX="488.0" layoutY="345.0" prefHeight="17.0" prefWidth="45.0" />
+            <Label fx:id="lbTVA" layoutX="496.0" layoutY="417.0" prefHeight="17.0" prefWidth="30.0" />
+            <Label fx:id="lbEnseigne" layoutX="202.0" layoutY="480.0" prefHeight="17.0" prefWidth="82.0" />
+            <Label fx:id="lbQuantite" layoutX="22.0" layoutY="417.0" prefHeight="17.0" prefWidth="38.0" />
+            <Label fx:id="lbTaille" layoutX="25.0" layoutY="345.0" prefHeight="17.0" prefWidth="71.0" />
+            <Label fx:id="lbCategorie" layoutX="25.0" layoutY="269.0" prefHeight="17.0" prefWidth="71.0" />
+            <Label fx:id="lbGenre" layoutX="25.0" layoutY="204.0" prefHeight="17.0" prefWidth="109.0" />
+            <TextField fx:id="tfPrixVenteDetail" layoutX="484.0" layoutY="231.0" promptText="Prix de vente en detail" />
+            <TextField fx:id="tfPrixAchat" layoutX="484.0" layoutY="164.0" promptText="Prix d'achat" />
+            <ComboBox fx:id="cbEnseigne" layoutX="188.0" layoutY="443.0" onMouseClicked="#cbEnseigneOnClick" prefHeight="33.0" prefWidth="359.0" promptText="Choisir l'enseigne" />
+            <TextField fx:id="tfTva" layoutX="484.0" layoutY="374.0" promptText="TVA (%)" />
+            <TextField fx:id="tfPrixVenteGros" layoutX="484.0" layoutY="301.0" promptText="Prix de vente en Gros" />
+            <TextField fx:id="tfQuantite" layoutX="22.0" layoutY="374.0" promptText="Quantite" />
+            <ComboBox fx:id="cbTaille" layoutX="22.0" layoutY="301.0" onMouseClicked="#cbTailleOnClick" prefHeight="33.0" prefWidth="221.0" promptText="choisir la taille" />
+            <ComboBox fx:id="cbCategorie" layoutX="22.0" layoutY="231.0" onAction="#cbCategorieOnAction" onMouseClicked="#cbCategorieOnClick" prefHeight="33.0" prefWidth="221.0" promptText="Choisir la categorie" />
+            <ComboBox fx:id="cbGenre" layoutX="22.0" layoutY="164.0" onAction="#cbGenreOnAction" onMouseClicked="#cbGenreOnClick" prefHeight="33.0" prefWidth="221.0" promptText="Choisir le genre" />
+            <TextField fx:id="tfNom" layoutX="180.0" layoutY="77.0" prefHeight="33.0" prefWidth="359.0" promptText="Nom de l'article" />
+            <Button fx:id="btnClose" layoutX="668.0" layoutY="10.0" mnemonicParsing="false" onAction="#btnCloseOnAction" prefHeight="44.0" prefWidth="60.0" text="X" />
+         </children>
+      </AnchorPane>
+   </children>
+</Group>

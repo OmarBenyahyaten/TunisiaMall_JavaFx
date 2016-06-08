@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="624.0" prefWidth="1294.0" stylesheets="@../../style/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tm.client.G_CarteFideliteClientController">
+   <children>
+      <StackPane fx:id="spProductContent" prefHeight="624.0" prefWidth="1294.0">
+         <children>
+            <AnchorPane id="AnchorPane" prefHeight="494.0" prefWidth="834.0">
+               <children>
+                  <BorderPane layoutX="220.0" layoutY="140.0" prefHeight="479.0" prefWidth="639.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <bottom>
+                        <HBox alignment="CENTER_RIGHT" prefHeight="66.0" prefWidth="944.0" spacing="20.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <Button fx:id="btnAjouter" mnemonicParsing="false" onAction="#btnAjouterOnAction" text="Ajouter" />
+                              <Button fx:id="btnModifier" mnemonicParsing="false" onAction="#btnModifierOnAction" text="Modifier" />
+                              <Button fx:id="btnSupprimer" mnemonicParsing="false" onAction="#btnSupprimerOnAction" text="Supprimer" />
+                           </children>
+                           <BorderPane.margin>
+                              <Insets right="20.0" />
+                           </BorderPane.margin>
+                        </HBox>
+                     </bottom>
+                     <center>
+                        <TableView fx:id="tblViewCarteClientFidele" editable="true" prefHeight="473.0" prefWidth="1171.0" style="-fx-background-color: none; -fx-border-color: none;" tableMenuButtonVisible="true" BorderPane.alignment="CENTER">
+                           <columns>
+                              <TableColumn fx:id="tblClmidCarteFidelite" prefWidth="164.0" text="idCarteFidelite" />
+                              <TableColumn fx:id="tblClmidClientFideleDesktop" prefWidth="188.0" text="idClientFideleDesktop" />
+                              <TableColumn fx:id="tblClmidEnseigne" prefWidth="232.0" text="idEnseigne" />
+                              <TableColumn fx:id="tblClmnombrePointFidele" prefWidth="263.0" text="nombrePointFidele" />
+                              <TableColumn fx:id="tblClmdateCreationCarteFidelite" prefWidth="372.0" text="dateCreationCarteFidelite" />
+                           </columns>
+                           <contextMenu>
+                              <ContextMenu>
+                                 <items>
+                                    <MenuItem fx:id="miSellSelected" mnemonicParsing="false" text="Sell It" />
+                                 </items>
+                              </ContextMenu>
+                           </contextMenu>
+                        </TableView>
+                     </center>
+                     <top>
+                        <BorderPane prefHeight="85.0" prefWidth="944.0" BorderPane.alignment="CENTER">
+                           <center>
+                              <AnchorPane fx:id="apCombobox" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <HBox alignment="CENTER" prefHeight="100.0" prefWidth="944.0" spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                           </center>
+                           <top>
+                              <HBox alignment="CENTER" prefHeight="44.0" prefWidth="944.0" spacing="10.0" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <TextField fx:id="tfSearch" onKeyReleased="#actionsearch" prefHeight="31.0" prefWidth="608.0" />
+                                    <Button fx:id="btnRefresh" mnemonicParsing="false" onAction="#RefreshOnAction" prefHeight="31.0" prefWidth="32.0" />
+                                 </children>
+                              </HBox>
+                           </top>
+                        </BorderPane>
+                     </top>
+                  </BorderPane>
+               </children>
+            </AnchorPane>
+         </children>
+         <padding>
+            <Insets left="30.0" right="30.0" />
+         </padding>
+      </StackPane>
+   </children>
+</AnchorPane>

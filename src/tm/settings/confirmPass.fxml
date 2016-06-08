@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="signup" style="-fx-opacity: ;" stylesheets="@../style/MainStyle.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tm.settings.confirmPasswordController">
+   <children>
+      <Label layoutX="204.0" layoutY="35.0" text="modify" textFill="WHITE">
+         <font>
+            <Font size="34.0" />
+         </font>
+      </Label>
+      <GridPane layoutX="74.0" layoutY="120.0" prefHeight="184.0" prefWidth="383.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <PasswordField fx:id="tfPassword" prefHeight="46.0" prefWidth="412.0" promptText="Password" />
+         </children>
+      </GridPane>
+      <Button fx:id="btnSignup" layoutX="192.0" layoutY="356.0" mnemonicParsing="false" onAction="#FindAction" prefHeight="36.0" prefWidth="129.0" text="modify" />
+      <Button fx:id="btnClose" layoutX="474.0" mnemonicParsing="false" onAction="#close" prefHeight="36.0" prefWidth="43.0" text="X" />
+      <Label fx:id="lbPassword" layoutX="78.0" layoutY="257.0" prefHeight="36.0" prefWidth="383.0" />
+   </children>
+</AnchorPane>

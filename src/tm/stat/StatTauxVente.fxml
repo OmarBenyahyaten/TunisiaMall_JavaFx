@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+
+<StackPane id="StackPane" prefHeight="400" prefWidth="650" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tnmall.StatTauxVenteController">
+    <children>
+        <PieChart fx:id="chart" />
+        <TextField fx:id="textField" maxWidth="75" opacity="0.0" />
+      <ComboBox fx:id="comb" maxHeight="55.0" maxWidth="70.0" minHeight="50.0" minWidth="70.0" onKeyReleased="#test" prefHeight="60.0" prefWidth="70.0" StackPane.alignment="TOP_LEFT" />
+    </children>
+</StackPane>

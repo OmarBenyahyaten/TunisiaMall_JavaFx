@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="624.0" prefWidth="1224.0" stylesheets="@../style/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tm.stock.GFactureController">
+   <children>
+      <StackPane fx:id="spProductContent" prefHeight="609.0" prefWidth="1222.0">
+         <children>
+            <AnchorPane id="AnchorPane" prefHeight="609.0" prefWidth="1134.0">
+               <children>
+                  <TableView fx:id="tblView" editable="true" layoutX="329.0" layoutY="63.0" prefHeight="189.0" prefWidth="423.0" style="-fx-background-color: none; -fx-border-color: none;">
+                     <columns>
+                        <TableColumn fx:id="tblClmIDFacture" prefWidth="88.0" text="ID Facture" />
+                        <TableColumn fx:id="tblClmTotal" prefWidth="155.0" text="Total TTC" />
+                        <TableColumn fx:id="tblClmDate" prefWidth="176.0" text="Date de Facture" />
+                     </columns>
+                     <contextMenu>
+                        <ContextMenu>
+                           <items>
+                              <MenuItem fx:id="miSellSelected" mnemonicParsing="false" text="Sell It" />
+                           </items>
+                        </ContextMenu>
+                     </contextMenu>
+                  </TableView>
+                  <TableView fx:id="tblViewVente" editable="true" layoutX="-29.0" layoutY="300.0" prefHeight="207.0" prefWidth="1217.0" style="-fx-background-color: none; -fx-border-color: none;">
+                     <columns>
+                        <TableColumn fx:id="tblClmIDArticle1" prefWidth="98.0" text="ID Article" />
+                        <TableColumn fx:id="tblClmNomArticle1" prefWidth="175.0" text="Nom Article" />
+                        <TableColumn fx:id="tblClmPrixUnitaire" prefWidth="96.33334350585938" text="Prix Unitaire " />
+                        <TableColumn fx:id="tblClmTVA1" prefWidth="94.66665649414062" text="TVA" />
+                        <TableColumn fx:id="tblClmQuantite1" minWidth="0.0" prefWidth="87.33331298828125" text="Quantite" />
+                        <TableColumn fx:id="tblClmTotalTVA" prefWidth="111.33331298828125" text="Total TVA" />
+                        <TableColumn fx:id="tblClmIDRemise" prefWidth="98.66668701171875" text="Remise" />
+                        <TableColumn fx:id="tblClmTotalRemise" prefWidth="115.6666259765625" text="Total remise" />
+                        <TableColumn fx:id="tblClmTotalHT" prefWidth="112.0" text="Total HT" />
+                        <TableColumn fx:id="tblClmTotalTTC" prefWidth="124.0" text="Total TTC" />
+                     </columns>
+                     <contextMenu>
+                        <ContextMenu>
+                           <items>
+                              <MenuItem fx:id="miSellSelected1" mnemonicParsing="false" text="Sell It" />
+                           </items>
+                        </ContextMenu>
+                     </contextMenu>
+                  </TableView>
+                  <Button layoutX="443.0" layoutY="570.0" mnemonicParsing="false" onAction="#btnImprimerOnAction" prefHeight="25.0" prefWidth="189.0" text="Imprimer la facture" />
+               </children>
+            </AnchorPane>
+         </children>
+         <padding>
+            <Insets left="30.0" right="30.0" />
+         </padding>
+      </StackPane>
+      <TextField fx:id="tfSearch" layoutX="98.0" layoutY="6.0" prefHeight="33.0" prefWidth="393.0" />
+      <Button fx:id="btnRefresh" layoutX="613.0" layoutY="5.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="32.0" />
+   </children>
+</AnchorPane>

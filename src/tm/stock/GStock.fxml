@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="624.0" prefWidth="1294.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tm.stock.GStockController">
+   <children>
+      <StackPane fx:id="spProductContent" prefHeight="624.0" prefWidth="1222.0">
+         <children>
+            <AnchorPane id="AnchorPane" prefHeight="609.0" prefWidth="1134.0">
+               <children>
+                  <BorderPane layoutX="-30.0" layoutY="140.0" prefHeight="609.0" prefWidth="1294.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-30.0" AnchorPane.rightAnchor="-102.0" AnchorPane.topAnchor="0.0">
+                     <bottom>
+                        <HBox alignment="CENTER_RIGHT" prefHeight="66.0" prefWidth="944.0" spacing="20.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <Button fx:id="btnAddNew" mnemonicParsing="false" onAction="#btnAddNewOnAction" text="Add New" />
+                              <Button fx:id="btnUpdate" mnemonicParsing="false" onAction="#btnUpdateOnAction" text="Update" />
+                              <Button fx:id="btnDelete" mnemonicParsing="false" onAction="#btnDeleteOnAction" text="Delete" />
+                           </children>
+                           <BorderPane.margin>
+                              <Insets right="20.0" />
+                           </BorderPane.margin>
+                        </HBox>
+                     </bottom>
+                     <top>
+                        <BorderPane prefHeight="55.0" prefWidth="1294.0" BorderPane.alignment="CENTER">
+                           <center>
+                              <AnchorPane fx:id="apCombobox" BorderPane.alignment="CENTER" />
+                           </center>
+                           <top>
+                              <HBox alignment="CENTER" prefHeight="44.0" prefWidth="944.0" spacing="10.0" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <TextField fx:id="tfSearch" onKeyReleased="#tfSearchOnKeyReleased" prefHeight="31.0" prefWidth="608.0" />
+                                    <Button fx:id="btnRefresh" mnemonicParsing="false" onAction="#btnRefreshOnAction" prefHeight="31.0" prefWidth="32.0" />
+                                 </children>
+                              </HBox>
+                           </top>
+                        </BorderPane>
+                     </top>
+                     <center>
+                        <TableView fx:id="tblView" editable="true" prefHeight="453.0" prefWidth="1294.0" style="-fx-background-color: none; -fx-border-color: none;" BorderPane.alignment="CENTER">
+                           <columns>
+                              <TableColumn fx:id="tblClmIDArticle" prefWidth="95.0" text="ID Article" />
+                              <TableColumn fx:id="tblClmNomArticle" prefWidth="199.0" text="Nom Article" />
+                              <TableColumn fx:id="tblClmPrixAchat" prefWidth="92.0" text="Prix Achat" />
+                              <TableColumn fx:id="tblClmPrixVenteGros" prefWidth="105.0" text="Prix Vente Gros" />
+                              <TableColumn fx:id="tblClmPrixVenteDetail" prefWidth="116.0" text="Prix Vente Detail" />
+                              <TableColumn fx:id="tblClmTVA" prefWidth="70.0" text="TVA" />
+                              <TableColumn fx:id="tblClmQuantite" prefWidth="121.0" text="Quantite" />
+                              <TableColumn fx:id="tblClmIDType" minWidth="0.0" prefWidth="101.0" text="ID type" />
+                              <TableColumn fx:id="tblClmIDEnseigne" prefWidth="125.0" text="Enseigne" />
+                              <TableColumn fx:id="tblClmImageF" prefWidth="137.0" />
+                              <TableColumn fx:id="tblClmImageS" minWidth="0.0" prefWidth="137.0" />
+                           </columns>
+                           <contextMenu>
+                              <ContextMenu>
+                                 <items>
+                                    <MenuItem fx:id="miSellSelected" mnemonicParsing="false" text="Sell It" />
+                                 </items>
+                              </ContextMenu>
+                           </contextMenu>
+                        </TableView>
+                     </center>
+                  </BorderPane>
+               </children>
+            </AnchorPane>
+         </children>
+         <padding>
+            <Insets left="30.0" right="30.0" />
+         </padding>
+      </StackPane>
+   </children>
+</AnchorPane>

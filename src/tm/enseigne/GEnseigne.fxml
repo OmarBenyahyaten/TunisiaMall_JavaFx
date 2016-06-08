@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="625.0" prefWidth="1294.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tm.enseigne.GEnseigneController">
+   <children>
+      <StackPane fx:id="spProductContent" prefHeight="625.0" prefWidth="1294.0">
+         <children>
+            <AnchorPane id="AnchorPane" prefHeight="625.0" prefWidth="1266.0">
+               <children>
+                  <BorderPane layoutX="-29.0" layoutY="140.0" prefHeight="625.0" prefWidth="1294.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-29.0" AnchorPane.rightAnchor="-31.0" AnchorPane.topAnchor="0.0">
+                     <bottom>
+                        <HBox alignment="CENTER_RIGHT" prefHeight="66.0" prefWidth="944.0" spacing="20.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <Button fx:id="btnAddNew" mnemonicParsing="false" onAction="#btnAddNewOnAction" text="Ajouter Enseigne" />
+                              <Button fx:id="btnUpdate" mnemonicParsing="false" onAction="#btnModifierOnAction" text="Modifier Enseigne" />
+                              <Button fx:id="btnSupprimer" mnemonicParsing="false" onAction="#btnSupprimerOnAction" text="Supprimer Enseigne" />
+                           </children>
+                           <BorderPane.margin>
+                              <Insets right="20.0" />
+                           </BorderPane.margin>
+                        </HBox>
+                     </bottom>
+                     <center>
+                        <TableView fx:id="tblViewEnseigne" editable="true" prefHeight="474.0" prefWidth="1252.0" style="-fx-background-color: none; -fx-border-color: none;" tableMenuButtonVisible="true" BorderPane.alignment="CENTER">
+                           <columns>
+                              <TableColumn fx:id="tblClmId" prefWidth="55.0" text="ID" />
+                              <TableColumn fx:id="tblClmNom" prefWidth="112.0" text="Nom" />
+                              <TableColumn fx:id="tblClmEntreprise" prefWidth="129.0" text="Entreprise" />
+                              <TableColumn fx:id="tblClmStore" prefWidth="115.0" text="Store" />
+                              <TableColumn fx:id="tblClmTel" prefWidth="142.0" text="Tel" />
+                              <TableColumn fx:id="tblClmOuverture" prefWidth="114.0" text="Heure d'Ouverture" />
+                              <TableColumn fx:id="tblClmFermetture" prefWidth="124.0" text="Heure de Fermeture" />
+                              <TableColumn fx:id="tblClmCategorie" prefWidth="94.0" text="Categorie" />
+                              <TableColumn fx:id="tblClmDescription" prefWidth="294.0" text="Description" />
+                              <TableColumn fx:id="tblClmLogo" minWidth="5.0" prefWidth="101.0" text="Logo" />
+                           </columns>
+                           <contextMenu>
+                              <ContextMenu>
+                                 <items>
+                                    <MenuItem fx:id="miSellSelected" mnemonicParsing="false" text="Sell It" />
+                                 </items>
+                              </ContextMenu>
+                           </contextMenu>
+                        </TableView>
+                     </center>
+                     <top>
+                        <BorderPane prefHeight="85.0" prefWidth="944.0" BorderPane.alignment="CENTER">
+                           <center>
+                              <AnchorPane fx:id="apCombobox" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <HBox alignment="CENTER" layoutY="7.0" prefHeight="100.0" prefWidth="944.0" spacing="10.0" AnchorPane.bottomAnchor="-7.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="7.0">
+                                       <children>
+                                          <ComboBox fx:id="cbSoteViewNom" onAction="#cbSoteViewNomOnAction" onMouseClicked="#cbSoteViewNomOnClick" prefHeight="33.0" prefWidth="163.0" promptText="             Nom " />
+                                          <ComboBox fx:id="cbSoteViewEntreprise" onAction="#cbSoteViewEntrepriseOnAction" onMouseClicked="#cbSoteViewEntrepriseOnClick" prefHeight="33.0" prefWidth="184.0" promptText="           Entreprise" />
+                                          <ComboBox fx:id="cbSoteViewStore" onAction="#cbSoteViewStoreOnAction" onMouseClicked="#cbSoteViewStoreOnClick" prefHeight="33.0" prefWidth="166.0" promptText="          Store" />
+                                          <ComboBox fx:id="cbSoteViewOuverture" onAction="#cbSoteViewOuvertureOnAction" onMouseClicked="#cbSoteViewOuvertureOnClick" prefHeight="33.0" prefWidth="168.0" promptText="   Hr. Ouverture" />
+                                          <ComboBox fx:id="cbSoteViewFermetture" onAction="#cbSoteViewFermettureOnAction" onMouseClicked="#cbSoteViewFermettureOnClick" prefHeight="33.0" prefWidth="172.0" promptText="   Hr. Fermetture" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </AnchorPane>
+                           </center>
+                           <top>
+                              <HBox alignment="CENTER" prefHeight="44.0" prefWidth="944.0" spacing="10.0" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <TextField fx:id="tfSearch" onKeyReleased="#tfSearchOnKeyReleased" prefHeight="33.0" prefWidth="563.0" />
+                                    <Button fx:id="btnRefresh" mnemonicParsing="false" onAction="#btnRefreshOnAction" prefHeight="31.0" prefWidth="32.0" />
+                                 </children>
+                              </HBox>
+                           </top>
+                        </BorderPane>
+                     </top>
+                  </BorderPane>
+               </children>
+            </AnchorPane>
+         </children>
+         <padding>
+            <Insets left="30.0" right="30.0" />
+         </padding>
+      </StackPane>
+   </children>
+</AnchorPane>

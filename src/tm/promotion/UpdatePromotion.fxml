@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Group stylesheets="@../../style/PopUp.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tm.promotion.UpdatePromotionController">
+   <children>
+      <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="570.0" prefWidth="734.0" stylesheets="@../../style/store.css">
+         <children>
+            <GridPane hgap="1.0" layoutY="55.0" prefHeight="515.0" prefWidth="740.0">
+               <children>
+                  <Label text="Date Debut :" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="6" />
+                  <Label text="Nom :" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <Label text="Description : " GridPane.columnIndex="1" GridPane.rowIndex="10" />
+                  <TextField fx:id="tfSlogan" prefHeight="25.0" prefWidth="274.0" GridPane.columnIndex="2" GridPane.columnSpan="3" GridPane.rowIndex="4" />
+                  <TextArea fx:id="taDescription" prefHeight="73.0" prefWidth="302.0" GridPane.columnIndex="2" GridPane.columnSpan="3" GridPane.rowIndex="10" GridPane.rowSpan="3" />
+                  <Button fx:id="btnModifier" mnemonicParsing="false" onAction="#btnModifierOnAction" prefHeight="35.0" prefWidth="137.0" text="Valider Modifier" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="14" />
+                  <Label text="Date Fin :" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                  <Label text="Slogan :" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                  <TextField fx:id="tfNom" prefHeight="25.0" prefWidth="298.0" GridPane.columnIndex="2" GridPane.columnSpan="3" GridPane.rowIndex="2" />
+                  <DatePicker fx:id="tfDebut" prefHeight="25.0" prefWidth="302.0" GridPane.columnIndex="2" GridPane.columnSpan="3" GridPane.rowIndex="6" />
+                  <DatePicker fx:id="tfFin" prefHeight="25.0" prefWidth="303.0" GridPane.columnIndex="2" GridPane.columnSpan="3" GridPane.rowIndex="8" />
+               </children>
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="95.0" minWidth="10.0" prefWidth="86.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="159.0" minWidth="10.0" prefWidth="137.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints />
+                  <ColumnConstraints />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+            </GridPane>
+            <Label fx:id="lblHeader" alignment="CENTER" layoutX="233.0" layoutY="17.0" prefHeight="36.0" prefWidth="318.0" text="Modifier Promotion">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnClose" layoutX="688.0" layoutY="-3.0" mnemonicParsing="false" onAction="#btnCloseOnAction" prefHeight="32.0" prefWidth="30.0" stylesheets="@../../../../../StoreKeeper-master/src/style/btnOnText.css" text="X" />
+            <TextField fx:id="tfId" layoutX="14.0" layoutY="14.0" visible="false" />
+         </children></AnchorPane>
+   </children>
+</Group>

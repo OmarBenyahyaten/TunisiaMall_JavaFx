@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="624.0" prefWidth="1294.0" stylesheets="@../../style/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tm.promotion.GPromotionController">
+   <children>
+      <StackPane fx:id="spProductContent" prefHeight="624.0" prefWidth="1294.0">
+         <children>
+            <AnchorPane id="AnchorPane" prefHeight="494.0" prefWidth="834.0">
+               <children>
+                  <BorderPane layoutX="220.0" layoutY="140.0" prefHeight="479.0" prefWidth="639.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <bottom>
+                        <HBox alignment="CENTER_RIGHT" prefHeight="66.0" prefWidth="944.0" spacing="20.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <Button fx:id="btnAddNew" mnemonicParsing="false" onAction="#btnAddNewOnAction" prefHeight="35.0" prefWidth="193.0" text="Ajouter Promotion" />
+                              <Button fx:id="btnModifier" mnemonicParsing="false" onAction="#btnModifierOnAction" prefHeight="35.0" prefWidth="186.0" text="Modifier Promotion" />
+                              <Button fx:id="btnSupprimer" mnemonicParsing="false" onAction="#btnSupprimerOnAction" prefHeight="35.0" prefWidth="184.0" text="Supprimer Promotion" />
+                           </children>
+                           <BorderPane.margin>
+                              <Insets right="20.0" />
+                           </BorderPane.margin>
+                        </HBox>
+                     </bottom>
+                     <center>
+                        <TableView fx:id="tblViewPromotion" editable="true" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: none; -fx-border-color: none;" tableMenuButtonVisible="true" BorderPane.alignment="CENTER">
+                           <columns>
+                              <TableColumn fx:id="tblClmId" prefWidth="106.0" text="ID" />
+                              <TableColumn fx:id="tblClmNom" prefWidth="210.0" text="Nom" />
+                              <TableColumn fx:id="tblClmSlogan" prefWidth="271.0" text="Slogan" />
+                              <TableColumn fx:id="tblClmDebut" prefWidth="133.0" text="Date Debut" />
+                              <TableColumn fx:id="tblClmFin" prefWidth="135.0" text="Date Fin" />
+                              <TableColumn fx:id="tblClmDescription" prefWidth="366.0" text="Description" />
+                           </columns>
+                           <contextMenu>
+                              <ContextMenu>
+                                 <items>
+                                    <MenuItem fx:id="miSellSelected" mnemonicParsing="false" text="Sell It" />
+                                 </items>
+                              </ContextMenu>
+                           </contextMenu>
+                        </TableView>
+                     </center>
+                     <top>
+                        <BorderPane prefHeight="85.0" prefWidth="944.0" BorderPane.alignment="CENTER">
+                           <center>
+                              <AnchorPane fx:id="apCombobox" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <HBox alignment="CENTER" prefHeight="100.0" prefWidth="944.0" spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                           </center>
+                           <top>
+                              <HBox alignment="CENTER" prefHeight="44.0" prefWidth="944.0" spacing="10.0" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <TextField fx:id="tfSearch" onKeyReleased="#actionSearch" onScroll="#actionSearch" onScrollFinished="#actionSearch" onScrollStarted="#actionSearch" prefHeight="33.0" prefWidth="562.0" />
+                                    <Button fx:id="btnRefresh" mnemonicParsing="false" prefHeight="31.0" prefWidth="32.0" />
+                                 </children>
+                              </HBox>
+                           </top>
+                        </BorderPane>
+                     </top>
+                  </BorderPane>
+               </children>
+            </AnchorPane>
+         </children>
+         <padding>
+            <Insets left="30.0" right="30.0" />
+         </padding>
+      </StackPane>
+   </children>
+</AnchorPane>

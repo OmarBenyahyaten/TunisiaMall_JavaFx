@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="624.0" prefWidth="1294.0" stylesheets="@../../style/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tm.article_promotion.GArticlePromotionController">
+   <children>
+      <StackPane fx:id="spProductContent" prefHeight="624.0" prefWidth="1294.0">
+         <children>
+            <AnchorPane id="AnchorPane" prefHeight="494.0" prefWidth="834.0">
+               <children>
+                  <BorderPane layoutX="220.0" layoutY="140.0" prefHeight="479.0" prefWidth="639.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <bottom>
+                        <HBox alignment="CENTER_RIGHT" prefHeight="66.0" prefWidth="944.0" spacing="20.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#btnImprimerOnAction" prefHeight="35.0" prefWidth="277.0" text="Imprimer les Article en promotion" />
+                              <Button fx:id="btnAddNew" mnemonicParsing="false" onAction="#btnAddNewOnAction" prefHeight="35.0" prefWidth="193.0" text="Ajouter ArticlePromotion" />
+                              <Button fx:id="btnModifier" mnemonicParsing="false" onAction="#btnModifierOnAction" prefHeight="35.0" prefWidth="186.0" text="Modifier ArticlePromotion" />
+                              <Button fx:id="btnSupprimer" mnemonicParsing="false" onAction="#btnSupprimerOnAction" prefHeight="35.0" prefWidth="184.0" text="Supprimer ArticlePromotion" />
+                           </children>
+                           <BorderPane.margin>
+                              <Insets right="20.0" />
+                           </BorderPane.margin>
+                        </HBox>
+                     </bottom>
+                     <top>
+                        <BorderPane prefHeight="85.0" prefWidth="944.0" BorderPane.alignment="CENTER">
+                           <center>
+                              <AnchorPane fx:id="apCombobox" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <HBox alignment="CENTER" prefHeight="100.0" prefWidth="944.0" spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <children>
+                                          <ComboBox fx:id="cbPromotion" onAction="#cbPromoOnAction" prefHeight="33.0" prefWidth="186.0" promptText="Promotion" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </AnchorPane>
+                           </center>
+                           <top>
+                              <HBox alignment="CENTER" prefHeight="44.0" prefWidth="944.0" spacing="10.0" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <TextField fx:id="tfSearch" prefHeight="33.0" prefWidth="562.0" />
+                                    <Button fx:id="btnRefresh" mnemonicParsing="false" onAction="#RefreshOnAction" prefHeight="31.0" prefWidth="32.0" />
+                                 </children>
+                              </HBox>
+                           </top>
+                        </BorderPane>
+                     </top>
+                  </BorderPane>
+               </children>
+            </AnchorPane>
+         </children>
+         <padding>
+            <Insets left="30.0" right="30.0" />
+         </padding>
+      </StackPane>
+      <TableView fx:id="tblViewArtPromo" editable="true" layoutX="214.0" layoutY="112.0" prefHeight="408.0" prefWidth="858.0" style="-fx-background-color: none; -fx-border-color: none;" tableMenuButtonVisible="true">
+         <columns>
+            <TableColumn fx:id="tblClmIDAr" prefWidth="135.0" text="ID Promotion" />
+            <TableColumn fx:id="tblClmIDPr" prefWidth="146.0" text="ID Article" />
+            <TableColumn fx:id="tblClmRedG" prefWidth="148.0" text="Taux Reduction Gros" />
+            <TableColumn fx:id="tblClmRedD" prefWidth="226.0" text="Taux Reduction Detail" />
+            <TableColumn fx:id="tblClmPoint" prefWidth="188.0" text="Nombre Point fidelite" />
+         </columns>
+         <contextMenu>
+            <ContextMenu>
+               <items>
+                  <MenuItem fx:id="miSellSelected" mnemonicParsing="false" text="Sell It" />
+               </items>
+            </ContextMenu>
+         </contextMenu>
+      </TableView>
+   </children>
+</AnchorPane>

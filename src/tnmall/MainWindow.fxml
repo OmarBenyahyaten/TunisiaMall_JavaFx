@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="690.0" prefWidth="1290.0" stylesheets="@../style/MainStyle.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tnmall.MainWindowController">
+   <children>
+      <StackPane fx:id="tambahBaju" layoutX="10.0" layoutY="10.0" prefHeight="650.0" prefWidth="1000.0" />
+      <Pane id="login" fx:id="login" prefHeight="690.0" prefWidth="1290.0" stylesheets="@../style/MainStyle.css">
+         <children>
+            <TextField fx:id="tfUser" layoutX="717.0" layoutY="237.0" prefHeight="50.0" prefWidth="395.0" promptText="Username" />
+            <PasswordField fx:id="tfPassword" layoutX="717.0" layoutY="304.0" prefHeight="50.0" prefWidth="395.0" promptText="Password" />
+            <Button fx:id="btnLogin" layoutX="777.0" layoutY="398.0" mnemonicParsing="false" onAction="#btnLoginOnAction" prefHeight="35.0" prefWidth="131.0" text="Login">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button layoutX="921.0" layoutY="398.0" mnemonicParsing="false" onAction="#btnSignUpOnAction" prefHeight="35.0" prefWidth="131.0" text="Sign up">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

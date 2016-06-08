@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<Group stylesheets="@../../style/PopUp.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tm.enseigne.AddRespBoutiqueController">
+   <children>
+      <AnchorPane prefHeight="659.0" prefWidth="777.0" stylesheets="@../../style/store.css">
+         <children>
+            <Label fx:id="lblHeader" alignment="CENTER" layoutX="189.0" layoutY="33.0" prefHeight="36.0" prefWidth="366.0" text="Ajouter Responsable Boutique">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </Label>
+            <GridPane hgap="1.0" layoutX="14.0" layoutY="60.0">
+               <children>
+                  <TextField fx:id="tfNom" prefHeight="25.0" prefWidth="220.0" promptText="Nom Responsable Boutique" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="1" />
+                  <TextField fx:id="tfPrenom" prefHeight="25.0" prefWidth="293.0" promptText="Prenom Responsable Boutique" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="3" />
+                  <TextField fx:id="tfEmail" promptText="Email Responsable Boutique" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="5" />
+                  <ComboBox fx:id="cbDebut" prefHeight="27.0" prefWidth="249.0" promptText="Heure Début Service" GridPane.columnIndex="2" GridPane.columnSpan="3" GridPane.rowIndex="9" />
+                  <ComboBox fx:id="cbFin" prefHeight="27.0" prefWidth="250.0" promptText="Heure Fin Service" GridPane.columnIndex="2" GridPane.columnSpan="3" GridPane.rowIndex="11" />
+                  <TextArea fx:id="taAdresse" minWidth="-Infinity" prefHeight="90.0" prefWidth="221.0" promptText="Adresse Responsable Boutique" GridPane.columnIndex="4" GridPane.columnSpan="2" GridPane.rowIndex="5" GridPane.rowSpan="3" />
+                  <Pane GridPane.columnIndex="5" GridPane.rowIndex="4" />
+                  <Pane GridPane.columnIndex="5" GridPane.rowIndex="7" />
+                  <Pane GridPane.columnIndex="5" GridPane.rowIndex="8" />
+                  <Pane GridPane.columnIndex="5" GridPane.rowIndex="11" />
+                  <Button fx:id="btnAjouter" mnemonicParsing="false" onAction="#btnAjouterOnAction" prefHeight="28.0" prefWidth="166.0" text="Valider Ajout" GridPane.columnIndex="5" GridPane.columnSpan="3" GridPane.halignment="CENTER" GridPane.rowIndex="17" />
+                  <TextField fx:id="tfTelephone" prefHeight="25.0" prefWidth="184.0" promptText="Telephone Resp. Boutique" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="7" />
+                  <TextField fx:id="tfLogin" minWidth="-Infinity" prefHeight="25.0" prefWidth="222.0" promptText="Veuillez indiquer votre Login" GridPane.columnIndex="4" GridPane.columnSpan="2" GridPane.rowIndex="1" />
+                  <TextField fx:id="tfPwd" minWidth="-Infinity" prefHeight="25.0" prefWidth="221.0" promptText="Veuillez indiquer votre Password" GridPane.columnIndex="4" GridPane.columnSpan="2" GridPane.rowIndex="3" />
+                  <ComboBox fx:id="cbEnseigne" onMouseClicked="#cbSoteViewNomOnClick" prefHeight="25.0" prefWidth="250.0" promptText="Enseigne Affectée" GridPane.columnIndex="2" GridPane.columnSpan="3" GridPane.rowIndex="13" />
+                  <Label fx:id="lbNom" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <Label fx:id="lbPrenom" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                  <Label fx:id="lbEmail" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                  <Label fx:id="lbLogin" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+                  <Label fx:id="lbTel" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                  <Label fx:id="lbPwd" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+                  <Label fx:id="lbAdresse" GridPane.columnIndex="4" GridPane.rowIndex="8" />
+                  <Label fx:id="lbDebut" GridPane.columnIndex="2" GridPane.rowIndex="10" />
+                  <Label fx:id="lbFin" GridPane.columnIndex="2" GridPane.rowIndex="12" />
+                  <Label fx:id="lbEnseigne" GridPane.columnIndex="2" GridPane.rowIndex="14" />
+               </children>
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="95.0" minWidth="10.0" prefWidth="86.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="159.0" minWidth="10.0" prefWidth="137.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints />
+                  <ColumnConstraints />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+            </GridPane>
+            <Button fx:id="btnClose" layoutX="693.0" layoutY="16.0" mnemonicParsing="false" onAction="#btnCloseOnAction" prefHeight="32.0" prefWidth="30.0" text="X" />
+         </children>
+      </AnchorPane>
+   </children>
+</Group>

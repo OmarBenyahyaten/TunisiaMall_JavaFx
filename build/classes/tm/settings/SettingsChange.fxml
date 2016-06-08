@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="609.0" prefWidth="1222.0" stylesheets="@../../style/MainStyle.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tm.settings.SettingsChangeController">
+   <children>
+      <StackPane fx:id="spProductContent" prefHeight="609.0" prefWidth="1222.0">
+         <padding>
+            <Insets left="30.0" right="30.0" />
+         </padding>
+         <children>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <Button id="save" fx:id="save" layoutX="976.0" layoutY="550.0" mnemonicParsing="false" onAction="#saveAction" text="save and exit" />
+               </children>
+            </AnchorPane>
+            <Accordion maxHeight="350.0" prefHeight="350.0" prefWidth="1162.0">
+              <panes>
+                <TitledPane animated="false" text="change username">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Label id="changeUsernameEtat" fx:id="changeUsernameEtat" layoutX="325.0" layoutY="155.0" prefHeight="41.0" prefWidth="340.0" />
+                              <TextField id="changeUsername" fx:id="changeUsername" layoutX="383.0" layoutY="120.0" onKeyReleased="#userNameModifyAction" promptText="username" />
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </TitledPane>
+                <TitledPane animated="false" text="change Email">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TextField fx:id="changeEmail" layoutX="392.0" layoutY="96.0" onKeyReleased="#EmailModifyLAction" />
+                              <Label fx:id="changeEmailEtat" layoutX="398.0" layoutY="181.0" prefHeight="17.0" prefWidth="200.0" />
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </TitledPane>
+                <TitledPane animated="false" text="change Password">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Label layoutX="300.0" layoutY="41.0" prefHeight="41.0" prefWidth="340.0" />
+                              <PasswordField id="passwordChange" fx:id="tfPassword" layoutX="356.0" layoutY="55.0" onKeyReleased="#PassWordChangeAction" promptText="Password" />
+                              <PasswordField id="passwordConfirmChange" fx:id="tfPasswordConfirm" layoutX="357.0" layoutY="172.0" onKeyReleased="#PassWordConfirmAction" promptText="Confirm Password" />
+                              <Label id="changePasswordEtat" layoutX="361.0" layoutY="219.0" prefHeight="25.0" prefWidth="213.0" />
+                              <Label fx:id="lbPassword" layoutX="454.0" layoutY="129.0" text="Label" />
+                              <Label fx:id="lbPasswordConfirm" layoutX="455.0" layoutY="236.0" text="Label" />
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </TitledPane>
+              </panes>
+            </Accordion>
+         </children>
+      </StackPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tm.enseigne.GResponsableBoutiqueController">
+   <children>
+      <StackPane fx:id="spProductContent" layoutX="10.0" layoutY="10.0" prefHeight="625.0" prefWidth="1294.0">
+         <children>
+            <AnchorPane id="AnchorPane" prefHeight="494.0" prefWidth="834.0">
+               <children>
+                  <BorderPane layoutX="220.0" layoutY="140.0" prefHeight="479.0" prefWidth="639.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <bottom>
+                        <HBox alignment="CENTER_RIGHT" prefHeight="66.0" prefWidth="944.0" spacing="20.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <Button fx:id="btnAddNew" mnemonicParsing="false" onAction="#btnAddNewOnAction" text="Ajouter Responsable" />
+                              <Button fx:id="btnUpdate" mnemonicParsing="false" onAction="#btnModifierOnAction" text="Modifier Responsable" />
+                              <Button fx:id="btnSupprimer" mnemonicParsing="false" onAction="#btnSupprimerOnAction" text="Supprimer Responsable" />
+                           </children>
+                           <BorderPane.margin>
+                              <Insets right="20.0" />
+                           </BorderPane.margin>
+                        </HBox>
+                     </bottom>
+                     <center>
+                        <TableView fx:id="tblViewResponsable" editable="true" onKeyReleased="#tfSearchOnKeyReleased" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: none; -fx-border-color: none;" tableMenuButtonVisible="true" BorderPane.alignment="CENTER">
+                           <columns>
+                              <TableColumn fx:id="tblClmId" text="ID" />
+                              <TableColumn fx:id="tblClmNom" prefWidth="108.0" text="Nom" />
+                              <TableColumn fx:id="tblClmPrenom" prefWidth="145.0" text="Prenom" />
+                              <TableColumn fx:id="tblClmAdresse" prefWidth="217.0" text="Adresse" />
+                              <TableColumn fx:id="tblClmTelephone" prefWidth="128.0" text="Téléphone" />
+                              <TableColumn fx:id="tblClmEnseigne" prefWidth="195.0" text="Enseigne" />
+                              <TableColumn fx:id="tblClmDebut" prefWidth="179.0" text="Hr. Début de Service" />
+                              <TableColumn fx:id="tblClmFin" prefWidth="169.0" text="Hr. Fin de Service" />
+                           </columns>
+                           <contextMenu>
+                              <ContextMenu>
+                                 <items>
+                                    <MenuItem fx:id="miSellSelected" mnemonicParsing="false" text="Sell It" />
+                                 </items>
+                              </ContextMenu>
+                           </contextMenu>
+                        </TableView>
+                     </center>
+                     <top>
+                        <BorderPane prefHeight="85.0" prefWidth="944.0" BorderPane.alignment="CENTER">
+                           <center>
+                              <AnchorPane fx:id="apCombobox" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <HBox alignment="CENTER" layoutY="7.0" prefHeight="100.0" prefWidth="944.0" spacing="10.0" AnchorPane.bottomAnchor="-7.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="7.0">
+                                       <children>
+                                          <ComboBox fx:id="cbSoteViewEnseigne" onAction="#cbSoteViewEnseigneOnAction" onMouseClicked="#cbSoteViewEnseigneOnClick" prefHeight="33.0" prefWidth="214.0" promptText="             Enseigne " />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </AnchorPane>
+                           </center>
+                           <top>
+                              <HBox alignment="CENTER" prefHeight="44.0" prefWidth="944.0" spacing="10.0" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <TextField fx:id="tfSearch" onKeyReleased="#tfSearchOnKeyReleased" prefHeight="33.0" prefWidth="563.0" />
+                                    <Button fx:id="btnRefresh" mnemonicParsing="false" onAction="#btnRefreshOnAction" prefHeight="31.0" prefWidth="32.0" />
+                                 </children>
+                              </HBox>
+                           </top>
+                        </BorderPane>
+                     </top>
+                  </BorderPane>
+               </children>
+            </AnchorPane>
+         </children>
+         <padding>
+            <Insets left="30.0" right="30.0" />
+         </padding>
+      </StackPane>
+   </children>
+</AnchorPane>

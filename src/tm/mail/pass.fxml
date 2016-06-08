@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="passpp" prefHeight="624.0" prefWidth="1294.0" stylesheets="@../../style/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tm.mail.passController">
+   <children>
+      <StackPane fx:id="spProductContent" prefHeight="624.0" prefWidth="1294.0">
+         <children>
+            <AnchorPane id="AnchorPane" prefHeight="494.0" prefWidth="834.0">
+               <children>
+                  <Button fx:id="btnPass" layoutX="371.0" layoutY="273.0" mnemonicParsing="false" onAction="#passAction" text="Button" />
+                  <TextField fx:id="pass" layoutX="342.0" layoutY="206.0" promptText="password" />
+               </children></AnchorPane>
+         </children>
+         <padding>
+            <Insets left="30.0" right="30.0" />
+         </padding>
+      </StackPane>
+   </children>
+</AnchorPane>

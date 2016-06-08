@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="624.0" prefWidth="1294.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tm.chat.GChatController">
+   <children>
+      <AnchorPane id="AnchorPane" layoutX="184.0" layoutY="10.0" prefHeight="613.0" prefWidth="929.0">
+         <children>
+            <SplitPane focusTraversable="true" orientation="VERTICAL" prefHeight="481.0" prefWidth="790.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <items>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" style="-fx-background-color: white;">
+                     <children>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="613.0" prefWidth="390.0">
+                           <children>
+                              <TextArea fx:id="OnlineLable" editable="false" layoutY="47.0" onMouseMoved="#leftTextArea" prefHeight="555.0" prefWidth="388.0" style="-fx-border-color: red;" wrapText="true" />
+                              <ComboBox fx:id="OnlineCombo" onAction="#OnlineCombo" prefHeight="31.0" prefWidth="387.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="402.0" minHeight="0.0" minWidth="0.0" prefHeight="611.0" prefWidth="418.0">
+                           <children>
+                              <TextArea fx:id="outputbox" editable="false" onMouseMoved="#rightTextArea" prefHeight="555.0" prefWidth="352.0" style="-fx-border-color: red;" wrapText="true" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="18.0" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="20.0" />
+                              <TextArea fx:id="inputbox" layoutX="28.0" layoutY="547.0" prefHeight="50.0" prefWidth="240.0" promptText="write your message here !!!" wrapText="true" AnchorPane.leftAnchor="28.0" AnchorPane.rightAnchor="139.20000000000005" />
+                              <Button fx:id="sendMessage" layoutX="239.0" layoutY="547.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="128.0" text="SEND" AnchorPane.leftAnchor="239.0" AnchorPane.rightAnchor="40.200000000000045">
+                                 <font>
+                                    <Font name="Cooper Black" size="18.0" fx:id="x3" />
+                                 </font>
+                              </Button>
+                              <Label fx:id="privateLabel" prefHeight="24.0" prefWidth="376.0" textFill="RED" visible="false">
+                                 <font>
+                                    <Font name="Cooper Black" size="12.0" fx:id="x6" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="privatemessage" prefHeight="52.0" prefWidth="273.0" visible="false" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </items>
+            </SplitPane>
+         </children>
+      </AnchorPane>
+      <TitledPane fx:id="nickTitledPane" collapsible="false" layoutX="382.0" layoutY="221.0" prefHeight="248.0" prefWidth="449.0" text="Bienvenu Sur le serveur TunisiaMall" textAlignment="CENTER">
+         <content>
+            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <TextField id="text-field" fx:id="nickTextFeild" alignment="CENTER" layoutX="59.0" layoutY="69.0" prefHeight="53.0" prefWidth="344.0" promptText="Pseudo" />
+                  <Button font="$x3" layoutX="128.0" layoutY="129.0" mnemonicParsing="false" onAction="#sendNickName" prefHeight="53.0" prefWidth="201.0" text="Login" />
+                  <TextField id="text-field" fx:id="serverip" alignment="CENTER" layoutX="58.0" layoutY="16.0" prefHeight="53.0" prefWidth="344.0" promptText="L'adresse ip du serveur TunisiaMall" />
+                  <Label fx:id="validationShow" font="$x6" layoutX="14.0" layoutY="190.0" prefHeight="24.0" prefWidth="376.0" text="Please Enter All feilds above !!" textFill="#ff3333" visible="false" />
+               </children>
+            </AnchorPane>
+         </content>
+         <font>
+            <Font size="27.0" />
+         </font>
+      </TitledPane>
+      <Label fx:id="hiddenusername" layoutX="14.0" layoutY="127.0" prefHeight="17.0" prefWidth="117.0" visible="false" />
+   </children>
+</AnchorPane>

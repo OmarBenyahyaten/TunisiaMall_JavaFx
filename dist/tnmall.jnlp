@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="tnmall.jnlp">
+  <information>
+    <title>tnmall</title>
+    <vendor>omarblythe</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="lib\bridj-0.6.2.jar" size="878674" download="eager" />
+    <jar href="lib\controlsfx-8.20.9.jar" size="1018351" download="eager" />
+    <jar href="lib\itextpdf-5.5.8.jar" size="2284013" download="eager" />
+    <jar href="lib\jbcrypt-0.3m.jar" size="17750" download="eager" />
+    <jar href="lib\mail.jar" size="521000" download="eager" />
+    <jar href="lib\mysql-connector-java-5.1.23-bin.jar" size="827921" download="eager" />
+    <jar href="lib\slf4j-api-1.7.2.jar" size="26083" download="eager" />
+    <jar href="lib\webcam-capture-0.3.10.jar" size="409084" download="eager" />
+    <jar href="lib\zxing-core-1.6.jar" size="330307" download="eager" />
+    <jar href="lib\zxing-javase.jar" size="14542" download="eager" />
+    <jar href="tnmall.jar" size="3723994" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="tnmall" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="tnmall.Tnmall"  name="tnmall" />
+  <update check="always"/>
+</jnlp>

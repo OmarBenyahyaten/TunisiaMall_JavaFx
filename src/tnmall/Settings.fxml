@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="705.0" prefWidth="1294.0" style="-fx-background-color: #dad9d9;" stylesheets="@../style/store.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tnmall.SettingsController">
+   <children>
+      <BorderPane fx:id="bpStore" prefHeight="705.0" prefWidth="1294.0">
+         <center>
+            <StackPane fx:id="spMainContent" prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: white;" stylesheets="@../style/style.css" BorderPane.alignment="CENTER" />
+         </center>
+         <top>
+            <AnchorPane fx:id="acHeadStore" prefHeight="81.0" prefWidth="965.0" stylesheets="@../style/store.css" BorderPane.alignment="CENTER">
+               <padding>
+                  <Insets bottom="20.0" />
+               </padding>
+               <children>
+                  <GridPane prefHeight="77.0" prefWidth="1294.0">
+                     <children>
+                        <HBox alignment="CENTER_RIGHT" prefHeight="63.0" prefWidth="268.0" GridPane.columnIndex="4">
+                           <children>
+                              <ToggleButton fx:id="btnModifiy" mnemonicParsing="false" onAction="#settingAction" text="modify" />
+                              <ToggleButton fx:id="btnRepoerts" mnemonicParsing="false" visible="false" />
+                           </children>
+                           <padding>
+                              <Insets right="10.0" />
+                           </padding>
+                        </HBox>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                           <children>
+                              <Label fx:id="lblHeader" layoutX="14.0" layoutY="21.0" text="Gestion du compte">
+                                 <font>
+                                    <Font size="34.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                        <ImageView fx:id="profilImg" fitHeight="59.0" fitWidth="160.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" />
+                        <ToggleButton fx:id="btnUsername" mnemonicParsing="false" onAction="#profilAction" prefHeight="63.0" prefWidth="162.0" GridPane.columnIndex="2" />
+                        <ToggleButton fx:id="btnsend" mnemonicParsing="false" onAction="#sendAction" prefHeight="63.0" prefWidth="162.0" text="send mail" GridPane.columnIndex="3" />
+                     </children>
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="801.0" minWidth="10.0" prefWidth="489.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="801.0" minWidth="10.0" prefWidth="165.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="801.0" minWidth="10.0" prefWidth="165.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="801.0" minWidth="10.0" prefWidth="221.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="512.0" minWidth="10.0" prefWidth="281.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                  </GridPane>
+               </children>
+            </AnchorPane>
+         </top>
+      </BorderPane>
+   </children>
+</AnchorPane>
